@@ -90,7 +90,7 @@ REST_FRAMEWORK = {
 }
 
 FIREBASE_AUTH = {
-    "SERVICE_ACCOUNT_KEY_FILE": "D:\\djangoProject\\firebase_key.json"
+    "SERVICE_ACCOUNT_KEY_FILE": "firebase_key.json"
 }
 
 # Password validation
@@ -146,5 +146,5 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, '../djangoDis/static'),
 )
