@@ -42,7 +42,7 @@ def predict_price(request):
     serializer = ProductSerializer(data=request.data)
     if (serializer.is_valid()):
         return JsonResponse({
-            "price": predict(request.data['name'])
+            "price": str(predict(request.data['name']))
         })
     else:
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
