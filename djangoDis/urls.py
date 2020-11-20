@@ -17,7 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 
-from djangoDis.productPrediction.product_prediction import predict_price, delete_all_products
+from djangoDis.ml.ml_starter import predict_price
+from djangoDis.productPrediction.product_prediction import delete_all_products
 from djangoDis.viewsets import ProductViewSet
 
 
