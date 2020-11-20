@@ -41,7 +41,7 @@ uritemplate==3.0.1
 urllib3==1.26.2
 whitenoise==5.2.0
 joblib
-numpy
+numpy==1.18.5
 pandas
 scikit-learn
 scipy
