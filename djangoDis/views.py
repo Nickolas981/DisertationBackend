@@ -1,6 +1,7 @@
-from django.http import HttpResponse, JsonResponse
+from django.http import JsonResponse
 from django_rest.decorators import api_view
-from rest_framework.views import APIView
+from rest_framework import status
+from rest_framework.response import Response
 
 from djangoDis.models import Product
 
