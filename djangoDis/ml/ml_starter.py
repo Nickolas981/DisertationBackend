@@ -12,10 +12,10 @@ from django.http import JsonResponse
 from rest_framework.response import Response
 from rest_framework import status
 
-scaler = joblib.load('./backend/assets/files/scaler.pickle')
+scaler = joblib.load('djangoDis/ml/backend/assets/files/scaler.pickle')
 
 model = f_regr()
-model.load_weights('./backend/assets/models/model.h5')
+model.load_weights('djangoDis/ml/backend/assets/models/model.h5')
 
 columns = ['name', 'item_condition_id', 'brand_name', 'category_name', 'shipping', 'item_description']
 
