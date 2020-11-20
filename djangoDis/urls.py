@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 
-
+from djangoDis.productPrediction.product_prediction import predict_price
 from djangoDis.viewsets import ProductViewSet
 
 
@@ -27,5 +27,6 @@ router.register(r'products', ProductViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
+    path('predict', predict_price),
 ]
 
