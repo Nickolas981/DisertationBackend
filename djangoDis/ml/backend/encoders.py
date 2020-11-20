@@ -3,7 +3,7 @@ from scipy.sparse import csr_matrix, hstack
 import pandas as pd
 
 # Initialize Files
-enc_c0 = joblib.load('ml/backend/assets/files/category-1.pickle')
+enc_c0 = joblib.load('assets/files/category-1.pickle')
 enc_c1 = joblib.load('backend/assets/files/category-2.pickle')
 enc_c2 = joblib.load('backend/assets/files/category-3.pickle')
 
