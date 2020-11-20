@@ -34,7 +34,7 @@ def predict(name):
     pred = model.predict(encoded_data)
     prediction = np.expm1(scaler.inverse_transform(pred.reshape(-1, 1))[:,0])
 
-    print(prediction[0])
+    return prediction[0]
 
 
 @api_view(['POST'])
