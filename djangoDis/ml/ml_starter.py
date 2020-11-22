@@ -47,7 +47,6 @@ def predict_price(request):
                 request.data['item_condition_id'],
                 request.data['category_name'],
                 request.data['brand_name'],
-                request.data['price'],
                 request.data['shipping'],
                 request.data['item_description'],
             ))
