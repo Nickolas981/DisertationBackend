@@ -20,8 +20,8 @@ model.load_weights('djangoDis/ml/backend/assets/models/model.h5')
 columns = ['name', 'item_condition_id', 'brand_name', 'category_name', 'shipping', 'item_description']
 
 
-def predict(name, item_condition_id, category_name, brand_name, price, shipping, item_description):
-    features = [name, item_condition_id, category_name, brand_name, price, shipping, item_description]
+def predict(name, item_condition_id, category_name, brand_name, shipping, item_description):
+    features = [name, item_condition_id, category_name, brand_name, shipping, item_description]
 
     data = np.array(features)
 
