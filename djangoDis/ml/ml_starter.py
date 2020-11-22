@@ -21,6 +21,10 @@ columns = ['name', 'item_condition_id', 'brand_name', 'category_name', 'shipping
 
 
 def predict(name, item_condition_id, category_name, brand_name, shipping, item_description):
+    if shipping:
+        shipping = 1
+    else:
+        shipping = 0
     features = [name, item_condition_id, category_name, brand_name, shipping, item_description]
 
     data = np.array(features)
