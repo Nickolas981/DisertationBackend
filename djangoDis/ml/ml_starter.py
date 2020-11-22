@@ -20,8 +20,8 @@ model.load_weights('djangoDis/ml/backend/assets/models/model.h5')
 columns = ['name', 'item_condition_id', 'brand_name', 'category_name', 'shipping', 'item_description']
 
 
-def predict(name):
-    features = [name, '5', 'apple', '', '1', 'test']
+def predict(name, item_condition_id, category_name, brand_name, price, shipping, item_description):
+    features = [name, item_condition_id, category_name, brand_name, price, shipping, item_description]
 
     data = np.array(features)
 
@@ -40,9 +40,18 @@ def predict(name):
 @api_view(['POST'])
 def predict_price(request):
     serializer = ProductSerializer(data=request.data)
-    if (serializer.is_valid()):
+    if serializer.is_valid():
         return JsonResponse({
-            "price": str(predict(request.data['name']))
+            "price": str(predict(
+                request.data['name'],
+                request.data['item_condition_id'],
+                request.data['category_name'],
+                request.data['brand_name'],
+                request.data['price'],
+                request.data['shipping'],
+                request.data['item_description'],
+            ))
         })
     else:
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
