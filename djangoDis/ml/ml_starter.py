@@ -2,6 +2,7 @@ import joblib
 import pandas as pd
 import numpy as np
 
+from djangoDis.ml.backend.assets.category_map import category_map
 from djangoDis.ml.backend.encoders import get_encodings
 from djangoDis.ml.backend.models import f_regr
 from djangoDis.ml.backend.preprocessing import preprocess
@@ -50,7 +51,7 @@ def predict_price(request):
             "price": str(predict(
                 request.data['name'],
                 request.data['item_condition_id'],
-                request.data['category_name'],
+                category_map[request.data['category_name']],
                 request.data['brand_name'],
                 request.data['shipping'],
                 request.data['item_description'],
