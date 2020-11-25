@@ -1223,4 +1223,3 @@ category_map = {
     "1222": "Women/Women's Handbags/Shoulder Bag",
     "1223": "Women/Women's Handbags/Totes & Shoppers"
 }
-D
