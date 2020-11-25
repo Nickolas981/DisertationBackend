@@ -25,7 +25,8 @@ def predict(name, item_condition_id, category_name, brand_name, shipping, item_d
         shipping = 1
     else:
         shipping = 0
-    features = [name, item_condition_id, category_name, brand_name, shipping, item_description]
+
+    features = [name, item_condition_id, brand_name, category_name, shipping, item_description]
 
     data = np.array(features)
 
